@@ -45,7 +45,7 @@ RUN apt-get update \
 
 # update and personal instalations
 RUN apt update && apt upgrade -y
-RUN apt install -y openssh-client nano sudo
+RUN apt install -y openssh-client nano sudo xdg-utils
 
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
 
