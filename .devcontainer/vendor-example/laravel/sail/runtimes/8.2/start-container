@@ -27,6 +27,10 @@ else
     }
 
     export PS1='\''\[\e[32m\]\u@$APP_NAME\[\e[m\]\[\e[31m\]➜\[\e[34m\]\w\[\e[33m\]$(parse_git_branch)\[\e[00m\] $(if [[ $? == 0 ]]; then echo "\[\e[32m\]\$ "; else echo "\[\e[31m\]\$ "; fi)\[\e[m\]'\'' ' >> /home/sail/.bashrc
-    
+
+    # Add a pest command in the ~/.bashrc
+    echo 'export PATH="$PATH:/var/www/html/vendor/bin"' >> /home/sail/.bashrc
+
+
     exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
 fi

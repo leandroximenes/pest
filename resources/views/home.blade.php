@@ -1,7 +1,6 @@
-
 <x-layouts.app>
-    <x-slot name="header">Home</x-slot>
-    <div class="text-3xl font-bold underline">
-        Hello world!
-</div>
-</x-layouts-app>
+    <x-slot name="header">Bookfriends</x-slot>
+    <div class="mt-8">
+        Sign up to get started.
+    </div>
+</x-layouts.app>
