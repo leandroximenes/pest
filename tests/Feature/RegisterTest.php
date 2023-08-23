@@ -6,11 +6,11 @@ use function Pest\Laravel\post;
 
 uses(RefreshDatabase::class);
 
-it('has errors if the details are not provided', function () {
+it('shows the register page')->get('auth/register')->assertSatatus(200);
 
-    post('/register')
-        ->assertSessionHasErrors(['name', 'email', 'password']);
-});
+it('has errors if the details are not provided')
+    ->post('/register')
+    ->assertSessionHasErrors(['name', 'email', 'password']);
 
 it('registers the user', function () {
 
